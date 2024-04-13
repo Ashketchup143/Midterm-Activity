@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, rgb(255, 255, 255), rgba(2, 2, 2, 0)), url('https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?cs=srgb&dl=pexels-lil-artsy-1925536.jpg&fm=jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: #ccc;
+  }
+    .portfolio-content {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .portfolio-item {
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Added CSS for styling sections */
+    .section {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      margin: 5px 0;
+    }
+
+    .card {
+      width: 500px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/uniquepage">Unique Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="portfolio-content">
+    <h2 class="animate__animated animate__bounce" style=" font-size:45px;  color: #472f17; font-weight: 30px;"><%= port[0] %></h2>
+    <section class="section">
+      <div class="portfolio-item">
+        <img width=400 height=400 src=<%= pimg[0] %> alt="Portfolio Item 1">
+        <p><%= port[1] %></p>
+      </div>
+      <div class="portfolio-item">
+        <img width=400 height=400 src=<%= pimg[1] %> alt="Portfolio Item 2">
+        <p><%= port[2] %></p>
+      </div>
+      <div class="portfolio-item">
+        <img width=400 height=400 src=<%= pimg[2] %> alt="Portfolio Item 3">
+        <p><%= port[3] %></p>
+      </div>
+      <!-- Add more portfolio items as needed -->
+    </section>
+    <h1 style=" font-size:45px;  color: #472f17; font-weight: 30px;"><%= port[4] %></h1>
+    <section class="section">
+      <div class="card">
+        <h2><%= port[5] %></h2>
+        <p><%= port[6] %></p>
+        <p><%= port[7] %></p>
+        <p><%= port[8] %></p>
+        <div style="padding: 15px;"></div>
+        <p><%= port[9] %></p>
+        <p><%= port[10] %></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2><%= port[11] %></h2>
+        <p><b><%= port[12] %></b> <%= port[13] %></p>
+        <p><b><%= port[14] %></b> <%= port[15] %></p>
+        <p><b><%= port[16] %></b> <%= port[17] %></p>
+        <p><b><%= port[18] %></b> <%= port[19] %></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2><%= port[20] %></h2>
+        <% for (let i =0; i<sub.length; i++){%>
+          <p>
+          <%= sub[i] %>
+          </p>
+        <%}%>
+        
+      </div>
+    </section>
+    
+    
+
+    <!-- Portfolio section -->
+    
+  </div>
+</body>
+</html>
